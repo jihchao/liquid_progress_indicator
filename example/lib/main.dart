@@ -19,27 +19,48 @@ class Example extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text("Circular"),
-              color: Colors.grey[300],
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.grey[300],
+                minimumSize: Size(88, 36),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(2.0)),
+                ),
+              ),
               onPressed: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => LiquidCircularProgressIndicatorPage(),
                 ),
               ),
             ),
-            FlatButton(
+            TextButton(
               child: Text("Linear"),
-              color: Colors.grey[300],
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.grey[300],
+                minimumSize: Size(88, 36),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(2.0)),
+                ),
+              ),
               onPressed: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => LiquidLinearProgressIndicatorPage(),
                 ),
               ),
             ),
-            FlatButton(
+            TextButton(
               child: Text("Custom"),
-              color: Colors.grey[300],
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.grey[300],
+                minimumSize: Size(88, 36),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(2.0)),
+                ),
+              ),
               onPressed: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => LiquidCustomProgressIndicatorPage(),
